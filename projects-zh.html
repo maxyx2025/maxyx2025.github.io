@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="system">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>项目 · Interspace</title>
+  <meta name="description" content="Interspace — Meks 的项目：GameJam 作品、Cyberspace AI 影像游戏与轻渡 VR 剧本杀。">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='%232E3A48'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="fonts/fonts.css?v=1" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="fonts/fonts.css?v=1"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=16">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('yiyu-theme');
+        d.setAttribute('data-theme', t || 'system');
+      } catch (e) { d.setAttribute('data-theme', 'system'); }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="site-logo" href="index-zh.html">Interspace</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a class="nav-link" href="index-zh.html">首页</a>
+        <span class="nav-sep" aria-hidden="true">·</span>
+        <a class="nav-link is-here" href="projects-zh.html" aria-current="page">项目</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" id="themeToggle" type="button" data-mode="system" aria-label="Theme · Auto" title="Theme · Auto">
+          <svg class="ti ti-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></svg>
+          <svg class="ti ti-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="ti ti-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+        <a class="nav-icon-btn" href="projects.html" hreflang="en" aria-label="Switch to English">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <aside class="rail" aria-label="章节进度">
+    <span class="rail-name" aria-hidden="true">INTERSPACE</span>
+    <nav class="rail-dots" aria-label="章节导航">
+      <button class="rail-dot is-current" type="button" aria-label="GameJam"><span class="dot"
+          aria-hidden="true"></span><span class="rail-label">GameJam</span></button>
+      <button class="rail-dot" type="button" aria-label="AI 影像游戏"><span class="dot" aria-hidden="true"></span><span
+          class="rail-label">AI 影像游戏</span></button>
+      <button class="rail-dot" type="button" aria-label="VR 剧本杀"><span class="dot" aria-hidden="true"></span><span
+          class="rail-label">VR 剧本杀</span></button>
+    </nav>
+  </aside>
+
+  <main class="deck" id="deck">
+    <div class="deck-track" id="track">
+
+      <!-- 1. GameJam -->
+      <section class="sheet" id="s3" aria-label="GameJam">
+        <div class="sheet-inner">
+          <header class="sec-head">
+            <p class="en-label">GameJam</p>
+            <h2 class="sec-title">GameJam</h2>
+          </header>
+          <p>GameJam 是一场限时开发挑战：围绕现场公布的主题，在 48 小时内从零做出一款游戏。以下是我参加过的四次
+            GameJam。</p>
+          <ul class="gj-list">
+            <li class="gj-item is-open">
+              <button class="gj-head" type="button" aria-expanded="true">
+                <span class="gj-name">Global Game Jam 2024</span>
+                <span class="gj-loc">广州</span>
+                <span class="gj-theme">主题 · SMILE</span>
+                <svg class="gj-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="gj-detail">
+                <div class="gj-detail-in">
+                  <img src="images/gamejam/smile.webp" alt="Smile Photo Studio 游戏封面" loading="lazy" decoding="async">
+                  <div class="gj-info">
+                    <p class="gj-game">Smile Photo Studio</p>
+                    <p class="gj-tags">恐怖</p>
+                    <p class="gj-links">
+                      <a class="u-link" href="https://meksqwq.itch.io/smile-photo-studio" target="_blank"
+                        rel="noopener">itch.io 试玩</a>
+                      <a class="u-link" href="https://www.bilibili.com/video/BV1EC411h7Wx" target="_blank"
+                        rel="noopener">Bilibili 视频</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="gj-item">
+              <button class="gj-head" type="button" aria-expanded="false">
+                <span class="gj-name">CiGA Game Jam 2024</span>
+                <span class="gj-loc">深圳</span>
+                <span class="gj-theme">主题 · Limit</span>
+                <svg class="gj-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="gj-detail">
+                <div class="gj-detail-in">
+                  <img src="images/gamejam/limit.webp" alt="Limitmare 游戏封面" loading="lazy" decoding="async">
+                  <div class="gj-info">
+                    <p class="gj-game">Limitmare</p>
+                    <p class="gj-tags">平台跳跃 · 策略</p>
+                    <p class="gj-links">
+                      <a class="u-link" href="https://meksqwq.itch.io/limited" target="_blank" rel="noopener">itch.io
+                        试玩</a>
+                      <a class="u-link" href="https://www.bilibili.com/video/BV11fhXewE1r" target="_blank"
+                        rel="noopener">Bilibili 视频</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="gj-item">
+              <button class="gj-head" type="button" aria-expanded="false">
+                <span class="gj-name">Global Game Jam 2023</span>
+                <span class="gj-loc">深圳</span>
+                <span class="gj-theme">主题 · Root</span>
+                <svg class="gj-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="gj-detail">
+                <div class="gj-detail-in">
+                  <img src="images/gamejam/root-720.webp" alt="RootToy 游戏封面" loading="lazy" decoding="async">
+                  <div class="gj-info">
+                    <p class="gj-game">RootToy</p>
+                    <p class="gj-tags">放松</p>
+                    <p class="gj-links">
+                      <a class="u-link" href="https://meksqwq.itch.io/roottoy" target="_blank" rel="noopener">itch.io
+                        试玩</a>
+                      <a class="u-link" href="https://www.bilibili.com/video/BV1N54y1g7id/" target="_blank"
+                        rel="noopener">Bilibili 视频</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="gj-item">
+              <button class="gj-head" type="button" aria-expanded="false">
+                <span class="gj-name">CiGA Game Jam 2023</span>
+                <span class="gj-loc">深圳</span>
+                <span class="gj-theme">主题 · Touch</span>
+                <svg class="gj-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="gj-detail">
+                <div class="gj-detail-in">
+                  <img src="images/gamejam/touch.webp" alt="CrazyWheels 游戏封面" loading="lazy" decoding="async">
+                  <div class="gj-info">
+                    <p class="gj-game">CrazyWheels</p>
+                    <p class="gj-tags">解谜</p>
+                    <p class="gj-links">
+                      <a class="u-link" href="https://meksqwq.itch.io/crazy-roller-skating-teacher" target="_blank"
+                        rel="noopener">itch.io 试玩</a>
+                      <a class="u-link" href="https://www.bilibili.com/video/BV1BP411y7oA" target="_blank"
+                        rel="noopener">Bilibili 视频</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 2. 项目 01 -->
+      <section class="sheet" id="s4" aria-label="项目 01">
+        <div class="sheet-inner">
+          <header class="sec-head">
+            <p class="en-label">AI 影像游戏</p>
+            <h2 class="sec-title">Cyberspace - AI 影像游戏</h2>
+          </header>
+          <div class="col-grid col-grid--proj">
+            <div class="col-main">
+              <p>林云的父母一夜之间消失无踪，只留下一身债务。被讨债人逼得走投无路的他逃到 S 市朋友的公寓，通过全身 VR
+                设备潜入了元宇宙——从撤离战场到开放世界再到夏日庆典，还有狙击手见雪、侦探墨殊、舞者玲珑和向导小梦四位女主的恋爱路线。而在父母失踪的背后，一个足以改变世界的秘密正浮出水面。</p>
+              <p class="en-label proj-tech">SLG · AI 影像 · 元宇宙</p>
+              <p class="proj-links">
+                <a class="u-link">了解更多..</a>
+              </p>
+            </div>
+            <div class="proj-visual proj-visual--image"><img
+                src="images/cyberspace-960.webp" alt="Cyberspace 项目宣传图" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 项目 02 -->
+      <section class="sheet" id="s5" aria-label="项目 02">
+        <div class="sheet-inner">
+          <header class="sec-head">
+            <p class="en-label">VR 剧本杀</p>
+            <h2 class="sec-title">轻渡 - VR 剧本杀</h2>
+          </header>
+          <div class="col-grid col-grid--proj">
+            <div class="proj-visual proj-visual--image"><img
+                src="images/jubensha-960.webp" alt="轻渡 VR 剧本杀宣传图" loading="lazy" decoding="async"></div>
+            <div class="col-main">
+              <p>邀请好友、选择剧本。游戏开始后，所有玩家便一同走进故事世界，置身于为剧情量身打造的沉浸式场景中——从被风暴封锁的庄园，到霓虹闪烁的都市。</p>
+              <p>戴上 VR头显后，每位玩家都能操控自己的全身虚拟化身，扮演剧本中的角色。在主持人的引导下，大家搜集证据、相互对质，逐步拼凑出真相——而每个角色手中，都握着谜底的一块碎片。</p>
+              <p class="en-label proj-tech">多人联机 · VR · 剧本杀</p>
+              <p class="proj-links">
+                <a class="u-link" href="https://www.bilibili.com/video/BV1qhKjeEESP" target="_blank"
+                  rel="noopener">了解更多..</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/main.js?v=10"></script>
+</body>
+
+</html>
