@@ -5,16 +5,22 @@ import re, os, sys, subprocess, collections
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 
 def fetch(url):
-    return subprocess.run(
-        ["curl", "-sS", "--fail", "--max-time", "60", "-A", UA, url],
-        check=True, capture_output=True).stdout
-CSS_URL = "https://fonts.googleapis.cn/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+SC:wght@400;600&display=swap"
+    last = None
+    for attempt in range(4):
+        r = subprocess.run(
+            ["curl", "-sS", "--fail", "--max-time", "60", "-A", UA, url],
+            capture_output=True)
+        if r.returncode == 0:
+            return r.stdout
+        last = r.stderr.decode("utf-8", "replace").strip()
+    raise RuntimeError(f"fetch failed after retries: {url}\n{last}")
+CSS_URL = "https://fonts.googleapis.cn/css2?family=Inter:wght@400;500;600;700&display=swap"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(ROOT, "fonts")
 
 # 1. 收集站点用字（4 个页面全文 + README 标题用不到，跳过）
 chars = set()
-for f in ["index.html", "index-zh.html", "projects.html", "projects-zh.html"]:
+for f in ["index.html", "index-zh.html"]:
     chars.update(open(os.path.join(ROOT, f), encoding="utf-8").read())
 chars = {c for c in chars if not c.isspace()}
 print(f"site chars: {len(chars)}")
