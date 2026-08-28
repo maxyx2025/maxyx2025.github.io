@@ -27,6 +27,22 @@
     sections.forEach(function (s) { io.observe(s); });
   }
 
+  /* ================= 主题切换（深色 / 米白浅色） =================
+     初始主题由 <head> 内联脚本从 localStorage 读出并写到 <html data-theme>，
+     这里只负责点击切换并持久化 */
+  var themeBtn = document.querySelector('.theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'light' ? '' : 'light';
+      if (next) {
+        document.documentElement.setAttribute('data-theme', next);
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  }
+
   /* ================= 点击复制（QQ 号 / Discord 用户名） =================
      复制后保持 "Copied!"，直到复制了其他内容才复原 */
   var copyBtns = Array.prototype.slice.call(document.querySelectorAll('[data-copy]'));

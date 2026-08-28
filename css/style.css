@@ -5,13 +5,29 @@
 :root {
   --bg: #0F172A;
   --bg-card: #112240;
+  --card-hover: rgba(17, 34, 64, .55);
   --line: #233554;
   --text: #CCD6F6;
   --text-mid: #A8B2D1;
   --text-dim: #8892B0;
   --accent: #5EEAD4;
   --accent-tint: rgba(94, 234, 212, .1);
+  --accent-border: rgba(94, 234, 212, .45);
   --sans: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+
+/* 浅色（米白）主题 */
+[data-theme="light"] {
+  --bg: #F7F3EA;
+  --bg-card: #FFFFFF;
+  --card-hover: #FFFFFF;
+  --line: #E4DECD;
+  --text: #1F2430;
+  --text-mid: #3E4456;
+  --text-dim: #6B7280;
+  --accent: #0D9488;
+  --accent-tint: rgba(13, 148, 136, .12);
+  --accent-border: rgba(13, 148, 136, .45);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -124,7 +140,26 @@ button { font-family: inherit; }
   padding: 5px 14px;
   transition: color .25s ease, border-color .25s ease;
 }
-.lang-switch:hover { color: var(--accent); border-color: rgba(94, 234, 212, .45); }
+.lang-switch:hover { color: var(--accent); border-color: var(--accent-border); }
+
+/* 主题切换（深浅色，语言切换旁小按钮） */
+.theme-toggle {
+  font: inherit;
+  color: var(--text-dim);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: color .25s ease, border-color .25s ease;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent-border); }
+.theme-toggle svg { width: 14px; height: 14px; display: block; }
+.theme-toggle .icon-sun { display: none; }
+[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
 
 /* ---------- 社交图标 ---------- */
 .socials { display: flex; align-items: center; gap: 20px; }
@@ -226,6 +261,8 @@ button { font-family: inherit; }
   color: var(--text-dim);
   white-space: nowrap;
 }
+/* 浅色模式下日期与标题同色，避免灰字在米白底上对比度不足 */
+[data-theme="light"] .xp-date { color: var(--text); }
 .xp-title {
   font-size: 16.5px;
   font-weight: 600;
@@ -267,8 +304,8 @@ a.xp-title:hover { color: var(--accent); }
   transition: border-color .25s ease, transform .25s ease, background-color .25s ease;
 }
 .proj:hover {
-  border-color: rgba(94, 234, 212, .45);
-  background: rgba(17, 34, 64, .55);
+  border-color: var(--accent-border);
+  background: var(--card-hover);
   transform: translateY(-3px);
 }
 .proj-thumb {
